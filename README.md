@@ -2,7 +2,7 @@
 
 ## 1. Luồng tích hợp của chatbot với livechat sẽ được chuyển đổi như sau:
 
-### Sử dụng Sync Service
+### Sử dụng Sync Service thay thế các luồng sau:
 - webhook:
   - /incoming_chat
   - /incoming_event
@@ -14,7 +14,7 @@
   - /tag_thread
   - /transfer_chat
   - /deactivate_chat
-### Sử dụng API:
+### Sử dụng API cho các luồng sau:
 - API:
   - /list_routing_statuses
   - /get_chat
