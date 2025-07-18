@@ -6,8 +6,8 @@
 - webhook:
   - /incoming_chat
   - /incoming_event
-  - /chat_transfered
-  - /chat_deactived
+  - /chat_transferred
+  - /chat_deactivated
 - API:
   - /send_typing_indicator
   - /send_event
@@ -21,16 +21,17 @@
 
 
 ### Thông tin Sync Service
+Mỗi bot 1 topic, cùng pub/sub trên topic đó, bên sub xử lý hoặc bỏ qua message theo action trong payload
 #### Publisher:
 
 AppCode: AMSUP
 
-Topic: support_chatbot
+Topic: support_chatbot_[tên bot]
 
 #### Subscribe:
 AppCode:
 
-Topic:
+Topic: support_chatbot_[tên bot]
 
 ### Thông tin xác thực API:
 - CLientID:
@@ -38,7 +39,7 @@ Topic:
 ### Thông tin payload truyền qua syncservice
 |  | Kiểu dữ liệu      | Tên trường |
 |-----|----------|------|
-|  1  | string     |  ActionType  |
+|  1  | string     |  action  |
 |  2  | object       |  Payload  |
 
 ## 2. Chi tiết các luồng
@@ -127,7 +128,7 @@ Publish vào topic **support_chatbot**:
 
 ```
 
-### 2.3. /chat_transfered
+### 2.3. /chat_transferred
 Publish vào topic **support_chatbot**:
 |  | Kiểu dữ liệu      | Tên trường |
 |-----|----------|------|
@@ -135,7 +136,7 @@ Publish vào topic **support_chatbot**:
 |  2  | TransferredEventDto       |  payload  |
 ```csharp
 {
-  "action": "chat_transfered",
+  "action": "chat_transferred",
   "payload": {
     "chat_id": "123e4567-e89b-12d3-a456-426614174000",
     "thread_id": "123e4567-e89b-12d3-a456-426614174001",
@@ -158,7 +159,7 @@ Publish vào topic **support_chatbot**:
 
 ```
 
-### 2.4. /chat_deactived
+### 2.4. /chat_deactivated
 Publish vào topic **support_chatbot**:
 |  | Kiểu dữ liệu      | Tên trường |
 |-----|----------|------|
@@ -166,7 +167,7 @@ Publish vào topic **support_chatbot**:
 |  2  | ChatDeactivatedEventDto       |  payload  |
 ```json
 {
-  "action": "chat_deactived",
+  "action": "chat_deactivated",
   "payload": {
     "chat_id": "123e4567-e89b-12d3-a456-426614174000",
     "thread_id": "123e4567-e89b-12d3-a456-426614174001",
