@@ -286,6 +286,7 @@ Nếu body null thì coi như chuỗi "" để mã hóa.
 curl -X POST 'https://domain/test/list_routing_statuses' \
   -H 'Content-Type: application/json' \
   -H 'x-client-id: <CLIENT_ID>' \
+  -H 'x-bot-id: <bot_id>' \
   -H 'x-signature: <SIGNATURE>' \
   -d '{
     "filter": {
@@ -311,9 +312,10 @@ curl -X POST 'https://domain/test/list_routing_statuses' \
 
 Nếu body null thì coi như chuỗi "" để mã hóa.
 ```
-curl -X POST 'https://domain/test/list_routing_statuses' \
+curl -X POST 'https://domain/test/get_chat' \
   -H 'Content-Type: application/json' \
   -H 'x-client-id: <CLIENT_ID>' \
+  -H 'x-bot-id: <bot_id>' \
   -H 'x-signature: <SIGNATURE>' \
   -d '{
     "chat_id": "",
