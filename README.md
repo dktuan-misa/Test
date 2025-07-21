@@ -58,52 +58,48 @@ Publish vào topic **support_chatbot**:
 ```csharp
 {
   "action": "incoming_chat",
+  "tenant_id": "550e8400-e29b-41d4-a716-446655440000",
   "payload": {
     "chat": {
-      "id": "123e4567-e89b-12d3-a456-426614174000",
-      "threads": [
-        {
-          "id": "123e4567-e89b-12d3-a456-426614174001",
-          "created_at": "2025-01-17T10:22:00Z",
-          "user_ids": [
-            "123e4567-e89b-12d3-a456-426614174003"
+      "id": "1123e4567-e89b-12d3-a456-426614174000",
+      "thread": {
+        "id": "789e4567-e89b-12d3-a456-426614174001",
+        "created_at": "2025-01-21T11:30:08Z",
+        "user_ids": [
+          "111e4567-e89b-12d3-a456-426614174002",
+          "113e4567-e89b-12d3-a456-426614174003"
+        ],
+        "access": {
+          "group_ids": [
+            "333e4567-e89b-12d3-a456-426614174004",
+            "444e4567-e89b-12d3-a456-426614174005"
           ]
+        },
+        "active": true,
+        "previous_thread_id": "555e4567-e89b-12d3-a456-426614174006",
+        "next_thread_id": null,
+        "events": [
+          {
+            "author_id": "111e4567-e89b-12d3-a456-426614174002"
+          }
+        ]
+      },
+      "users": [
+        {
+          "id": "111e4567-e89b-12d3-a456-426614174002",
+          "type": "customer",
+          "present": true,
+          "name": "Nguyễn Văn A",
+          "email": "nguyenvana@example.com",
+          "last_seen_time_stamp": 1642781400000,
+          "created_at": "2025-01-20T10:00:00Z"
         }
       ],
       "access": {
         "group_ids": [
-          "123e4567-e89b-12d3-a456-426614174004"
+          "333e4567-e89b-12d3-a456-426614174008"
         ]
-      },
-      "active": true,
-      "previous_thread_id": null,
-      "next_thread_id": null
-    },
-    "users": [
-      {
-        "id": "123e4567-e89b-12d3-a456-426614174002",
-        "type": "customer",
-        "present": true,
-        "name": "Nguyễn Văn A",
-        "email": "nguyenvana@example.com",
-        "last_seen_time_stamp": 1642442520000,
-        "created_at": "2025-01-17T10:20:00Z"
-      },
-      {
-        "id": "123e4567-e89b-12d3-a456-426614174003",
-        "type": "agent",
-        "present": true,
-        "name": "Agent Support",
-        "email": "agent@company.com",
-        "last_seen_time_stamp": 1642442525000,
-        "created_at": "2025-01-17T10:15:00Z",
-        "routing_status": "available"
       }
-    ],
-    "access": {
-      "group_ids": [
-        "123e4567-e89b-12d3-a456-426614174004"
-      ]
     }
   }
 }
