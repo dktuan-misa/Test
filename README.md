@@ -1,4 +1,6 @@
 # Tài liệu tích hợp AMIS Support & CHATBOT
+## Lịch sử cập nhật
+- 21/7/2025: bổ sung tenant_id khi trao đổi qua syncservice, bên support sẽ gửi thêm tenant khi có trigger sang chatbot, chatbot phản hồi sẽ gửi lại tenant_id này
 
 ## 1. Luồng tích hợp của chatbot với livechat sẽ được chuyển đổi như sau:
 
