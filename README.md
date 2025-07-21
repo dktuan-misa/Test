@@ -40,7 +40,8 @@ Topic: support_chatbot_[tên bot]
 |  | Kiểu dữ liệu      | Tên trường |
 |-----|----------|------|
 |  1  | string     |  action  |
-|  2  | object       |  Payload  |
+|  2  | object       |  payload  |
+|  3  | Guid       |  tenant_id  |
 
 ## 2. Chi tiết các luồng
 
@@ -50,6 +51,7 @@ Publish vào topic **support_chatbot**:
 |-----|----------|------|
 |  1  | string     |  action  |
 |  2  | IncomingChatDto       |  payload  |
+|  3  | Guid       |  tenant_id  |
 
 ```csharp
 {
@@ -112,6 +114,7 @@ Publish vào topic **support_chatbot**:
 |-----|----------|------|
 |  1  | string     |  action  |
 |  2  | IncomingEventDto       |  payload  |
+|  3  | Guid       |  tenant_id  |
 
 ```csharp
 {
@@ -134,6 +137,7 @@ Publish vào topic **support_chatbot**:
 |-----|----------|------|
 |  1  | string     |  action  |
 |  2  | TransferredEventDto       |  payload  |
+|  3  | Guid       |  tenant_id  |
 ```csharp
 {
   "action": "chat_transferred",
@@ -165,6 +169,7 @@ Publish vào topic **support_chatbot**:
 |-----|----------|------|
 |  1  | string     |  action  |
 |  2  | ChatDeactivatedEventDto       |  payload  |
+|  3  | Guid       |  tenant_id  |
 ```json
 {
   "action": "chat_deactivated",
@@ -182,6 +187,7 @@ Publish vào topic **support_chatbot**:
 |-----|----------|------|
 |  1  | string     |  action  |
 |  2  | TypingIndicator       |  payload  |
+|  3  | Guid       |  tenant_id  |
 ```json
 {
   "action": "send_typing_indicator",
@@ -197,6 +203,7 @@ Publish vào topic **support_chatbot**:
 |-----|----------|------|
 |  1  | string     |  action  |
 |  2  | SendEvent       |  payload  |
+|  3  | Guid       |  tenant_id  |
 ```json
 {
   "action": "send_event",
@@ -216,6 +223,7 @@ Publish vào topic **support_chatbot**:
 |-----|----------|------|
 |  1  | string     |  action  |
 |  2  | TagThread       |  payload  |
+|  3  | Guid       |  tenant_id  |
 
 ```json
 {
@@ -258,6 +266,7 @@ Publish vào topic **support_chatbot**:
 |-----|----------|------|
 |  1  | string     |  action  |
 |  2  | ChatDeactivated       |  payload  |
+|  3  | Guid       |  tenant_id  |
 ```json
 {
   "action": "deactivate_chat",
