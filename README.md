@@ -413,6 +413,12 @@ curl -X POST 'https://domain/test/get_chat' \
 | List\<User>         | users       |
 | Access             | access      |
 
+### Event
+| Kiểu dữ liệu             | Tên trường |
+|-------------------------|------------|
+| string ("message", "file", "rich_message")                  | type     | 
+| Guid? | author_id    |
+
 ### FileEventRequest : Event
 | Kiểu dữ liệu   | Tên trường     |
 |---------------|---------------|
